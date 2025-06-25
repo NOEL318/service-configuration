@@ -15,7 +15,7 @@ spring:
         dialect: org.hibernate.dialect.MySQL8Dialect
     open-in-view: false
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/intranetdb?useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://mysql:3306/intranetdb
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: "root"
