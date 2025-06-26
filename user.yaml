@@ -1,15 +1,6 @@
 spring:
   application:
     name: user
-management:
-  graphite:
-    metrics:
-      export:
-        enabled: false
-  security:
-    user:
-      name: ""
-      password: ""
   jpa:
     hibernate:
       ddl-auto: update
@@ -19,7 +10,9 @@ management:
         dialect: org.hibernate.dialect.MySQL8Dialect
     open-in-view: false
   datasource:
-    url: jdbc:mysql://mysql-prod:3306/intranetdb
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: "root"
 server:
   port: 0
 
@@ -29,3 +22,12 @@ eureka:
     fetch-registry: true
   instance:
     instance-id: ${spring.application.name}:${random.uuid}
+management:
+  graphite:
+    metrics:
+      export:
+        enabled: false
+  security:
+    user:
+      name: ""
+      password: ""
