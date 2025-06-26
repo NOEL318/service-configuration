@@ -19,7 +19,7 @@ management:
         dialect: org.hibernate.dialect.MySQL8Dialect
     open-in-view: false
   datasource:
-    url: jdbc:mysql://mysql-prod:3306/intranetdb
+    url: jdbc:mysql://mysql:3306/intranetdb
 server:
   port: 0
 

@@ -1,21 +1,20 @@
-
 server:
   port: 8080
 
 spring:
-  application:
-    name: api-gateway
   cloud:
     gateway:
-      routes:
-        - id: user
-          uri: lb://user
-          predicates:
-            - Path=/user/**
-        - id: student
-          uri: lb://member
-          predicates:
-            - Path=/student/**
+      server:
+        webflux:
+          routes:
+            - id: user
+              uri: lb://user
+              predicates:
+                - Path=/user/**
+            - id: member
+              uri: lb://member
+              predicates:
+                - Path=/member/**
 eureka:
   client:
     register-with-eureka: true
